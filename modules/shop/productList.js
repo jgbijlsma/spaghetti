@@ -1,10 +1,11 @@
 import product from "../../components/product.js";
-import vars from "../../vars.js";
+
+const container = document.getElementById("productList");
 
 export default async function productList() {
   const products = await getAllProducts();
 
-  products.forEach((productData) => product(productData, vars.container));
+  products.forEach((productData) => product(productData, container));
 }
 
 async function getAllProducts() {

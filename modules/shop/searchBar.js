@@ -1,7 +1,7 @@
 import product from "../../components/product.js";
-import vars from "../../vars.js";
 
 const searchForm = document.getElementById("searchBarForm");
+const container = document.getElementById("productList");
 
 export default function searchBar() {
   addSubmitListener();
@@ -14,7 +14,7 @@ function addSubmitListener() {
     const products = await search(query);
 
     container.innerHTML = "";
-    products.forEach((productData) => product(productData, vars.container));
+    products.forEach((productData) => product(productData, container));
   });
 }
 
