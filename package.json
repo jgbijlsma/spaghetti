@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "start": "npx live-server"
+    "start": "npx live-server ./app"
   }
 }
